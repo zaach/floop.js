@@ -1,0 +1,14 @@
+{
+  "author": "Zach Carter <zcarter@cse.usf.edu> (http://zaa.ch)",
+  "name": "floop",
+  "description": "FlooP and BlooP",
+  "version": "0.0.0",
+  "repository": {
+    "url": ""
+  },
+  "engines": {
+    "node": "~v0.4.10"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
