@@ -44,7 +44,7 @@ program
 
 procedure
   : DEFINE PROCEDURE QUOTE IDENT QUOTE '[' (identifier ',')* identifier? ']' ':' block '.'
-    -> ProcedureStmt({name:$4},[$7.concat([$8]),$11])
+    -> ProcedureStmt({name:$4},[$7.concat($8 ? [$8] : []),$11])
   ;
 
 block
