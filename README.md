@@ -40,11 +40,11 @@ Generate an asm.js module of your FlooP program:
 
 Include this module in a webpage to run:
 
-  <script src="fibo.js"></script>
-  <script>
-    // log the 8th fibonacci number
-    console.log(fibo.FIBO(8));
-  </script>
+    <script src="fibo.js"></script>
+    <script>
+        // log the 8th fibonacci number
+        console.log(fibo.FIBO(8));
+    </script>
 
 If you want the script to execute from the command-line, don't specify any functions to export and it will run the `MAIN` function defined in the FLooP module.
 
