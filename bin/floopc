@@ -11,7 +11,6 @@ var argv = require('optimist')
     .usage('$0 [options] <file>')
     .demand(1)
     .default('b', 'asmjs')
-    .default('e', 'main')
     .boolean('a')
     .boolean('p')
     .alias('b', 'backend')
@@ -23,6 +22,7 @@ var argv = require('optimist')
     .describe('e', 'The functions to export (comma-delimited)')
     .describe('a', 'Print only an ast')
     .describe('p', 'Parse only')
+    .describe('m', 'Export the module with this name')
     .argv
 ;
 
@@ -51,7 +51,7 @@ function main() {
       fs.write(info.fd, source);
       fs.close(info.fd, function(err) {
         var args = '';
-        if (options.e) args += ' -e ' + options.e;
+        if (options.e) args += ' -e ' + options.e + ',main';
         if (options.m) args += ' -m ' + options.m;
 
         exec(ljcPath + args + ' ' + info.path, { env: process.env }, function(err, stdout) {
