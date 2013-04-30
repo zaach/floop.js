@@ -4,11 +4,13 @@ This is an example compiler for FlooP programs that can generate JavaScript or a
 
 ## Install
 
-Grab the source code from github:
+You'll need node.js and npm first. Grab the source code from github and install dependencies:
 
     git clone git://github.com/zaach/floop.js.git
+    cd floop.js
+    npm install
 
-Then you need the source code for the modified LLJS to asm.js compiler:
+You also need to download the source code for the modified LLJS to asm.js compiler:
 
     git clone git://github.com/zaach/LLJS.git
 
@@ -46,7 +48,7 @@ Include this module in a webpage to run:
         console.log(fibo.FIBO(8));
     </script>
 
-If you want the script to execute from the command-line, don't specify any functions to export and it will run the `MAIN` function defined in the FLooP module.
+If you want the script to execute from the command-line, don't specify any functions to export and it will run the `MAIN` function defined in the FLooP module:
 
     ./bin/floopc examples/fibo.bloop > fibo-shell.js
 
